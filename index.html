@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Interactive Dashboard</title>
+    
+    <!-- Your custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     
     <!-- Bootstrap CSS -->
@@ -13,15 +15,13 @@
     <h1>My Interactive Dashboard</h1>
     <p>This dashboard was created by Adrian Jimenez-Molina for the WEB-115 course at Wake Tech</p>
 
-    <!-- Removed the old document.write() and the old script.js link -->
-
     <div class="container">
         <div class="row">
-            <!-- NEW: Weekly Tasks section -->
+
+            <!-- ========== Existing Weekly Tasks section ========== -->
             <div class="col" id="weekly-tasks">
                 <h2>Weekly Task Goals</h2>
 
-                <!-- Form to collect user input -->
                 <form id="goal-form" class="mb-3">
                     <div class="mb-3">
                         <label for="user-name" class="form-label">Name</label>
@@ -41,23 +41,59 @@
                     <button type="submit" class="btn btn-primary" id="goal-btn">Calculate Weekly Goal</button>
                 </form>
 
-                <!-- Output area -->
+                <!-- Output area for weekly tasks -->
                 <p id="goal-message" class="alert alert-info" style="display: none;"></p>
 
-                <!-- Link to the new external JavaScript file -->
+                <!-- Link to the task manager script -->
                 <script src="js/task-manager.js"></script>
             </div>
-        </div>
-    </div>
 
-                <!-- Output area -->
-                <p id="goal-message" class="alert alert-info" style="display: none;"></p>
+            <!-- ========== NEW: Imperial / Metric Converter ========== -->
+            <div class="col" id="metric-converter">
+                <h2>Imperial / Metric Converter</h2>
+                <p>Convert between inches, feet, yards, miles, centimeters, meters, and kilometers.</p>
+
+                <form id="converter-form" class="mb-3">
+                    <!-- Numeric input -->
+                    <div class="mb-3">
+                        <label for="input-value" class="form-label">Value</label>
+                        <input type="number" class="form-control" id="input-value" placeholder="Enter a number" step="any" min="0" required>
+                    </div>
+
+                    <!-- Conversion type dropdown -->
+                    <div class="mb-3">
+                        <label for="conversion-type" class="form-label">Conversion Type</label>
+                        <select class="form-select" id="conversion-type">
+                            <option value="in-to-cm">Inches → Centimeters</option>
+                            <option value="cm-to-in">Centimeters → Inches</option>
+                            <option value="ft-to-m">Feet → Meters</option>
+                            <option value="m-to-ft">Meters → Feet</option>
+                            <option value="yd-to-m">Yards → Meters</option>
+                            <option value="m-to-yd">Meters → Yards</option>
+                            <option value="mi-to-km">Miles → Kilometers</option>
+                            <option value="km-to-mi">Kilometers → Miles</option>
+                            <option value="in-to-m">Inches → Meters</option>
+                            <option value="m-to-in">Meters → Inches</option>
+                            <option value="ft-to-cm">Feet → Centimeters</option>
+                            <option value="cm-to-ft">Centimeters → Feet</option>
+                        </select>
+                    </div>
+
+                    <!-- Convert button -->
+                    <button type="submit" class="btn btn-success" id="convert-btn">Convert</button>
+                </form>
+
+                <!-- Output area for the converter -->
+                <div id="result" class="alert alert-secondary">
+                    Enter a value and select a conversion type, then click Convert.
+                </div>
+
+                <!-- Link to the converter script (with defer) -->
+                <script src="metric-converter.js" defer></script>
             </div>
-        </div>
-    </div>
 
-    <!-- External JavaScript -->
-    <script src="js/task-manager.js"></script>
+        </div> <!-- end .row -->
+    </div> <!-- end .container -->
 
     <!-- Bootstrap JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
