@@ -14,3 +14,13 @@ Supported units are: inch, foot, yard, mile, centimeter, meter, and kilometer.
 Users enter a numeric value, select a conversion type from a dropdown menu, 
 and click a button to see the converted result displayed on the page.
 ### Logic and Pseudocode
+
+## Magic Eight Ball
+
+A classic Magic Eight Ball game. Type a yes/no question, click the ball, and receive a random answer.
+
+**Features:**
+- Random answers selected using `Math.random()`
+- Ball shakes when clicked (CSS animation)
+- Answer appears in a white circle over the ball
+- Reset button clears the answer and the question
