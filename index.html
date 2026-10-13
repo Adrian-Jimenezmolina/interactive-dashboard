@@ -19,6 +19,7 @@
             <div class="col" id="weekly-tasks">
                 <h2>Weekly Task Goals</h2>
 
+                <!-- Existing goal form -->
                 <form id="goal-form" class="mb-3">
                     <div class="mb-3">
                         <label for="user-name" class="form-label">Name</label>
@@ -39,6 +40,18 @@
                 </form>
 
                 <p id="goal-message" class="alert alert-info" style="display: none;"></p>
+
+                <!-- ===== NEW TASK LIST SECTION (required by assignment) ===== -->
+                <div id="task-list">
+                    <h3>Weekly Task List</h3>
+                    <p>Enter a task below to manage your goals.</p>
+
+                    <form class="mb-3">
+                        <label for="task-name" class="form-label">Enter task:</label>
+                        <input type="text" class="form-control" id="task-name" placeholder="Type a new task…">
+                        <button type="button" class="btn btn-success mt-2" id="add-task">Add Task</button>
+                    </form>
+                </div>
 
                 <script src="js/task-manager.js"></script>
             </div>
