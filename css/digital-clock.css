@@ -1,0 +1,33 @@
+/* Basic styles required by the assignment + a clean look */
+#digital-clock {
+  background-color: #1a1a2e;
+  color: #eaeaea;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1rem;
+}
+
+#digital-clock h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  color: #00d9ff;
+  letter-spacing: 1px;
+}
+
+#clock-face {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: #00ff9f;
+  letter-spacing: 3px;
+  font-variant-numeric: tabular-nums;
+}
+
+#calendar-date {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0 0;
+  color: #a0a0a0;
+}
